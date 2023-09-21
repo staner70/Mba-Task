@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class addProductToWishlist extends BaseTest {
     @Test
-    public void testDriver(){
-
+    public void testDriver() throws InterruptedException {
+        Thread.sleep(3000);
     }
 }
