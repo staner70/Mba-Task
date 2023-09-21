@@ -1,5 +1,6 @@
 package com.masterbranchacademy.utilities;
 
+import com.masterbranchacademy.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -11,6 +12,12 @@ public class BaseTest {
     protected WebDriverWait wait;
 
 
+/*    @BeforeTest
+    public void login(){
+        LoginPage login = new LoginPage();
+        login.login();
+    }*/
+
     @Parameters("browser")
     @BeforeMethod
     public void setUp(@Optional String browser){
@@ -20,6 +27,8 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        LoginPage login = new LoginPage();
+        login.login();
 
     }
 
