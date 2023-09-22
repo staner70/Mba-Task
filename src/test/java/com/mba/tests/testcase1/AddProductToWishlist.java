@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class addProductToWishlist extends BaseTest {
+public class AddProductToWishlist extends BaseTest {
     @Test
     public void addProductToWishlist() throws InterruptedException {
         String actualTitleHome = driver.getTitle();
