@@ -1,6 +1,6 @@
-package com.masterbranchacademy.pages;
+package com.mba.pages;
 
-import com.masterbranchacademy.utilities.ConfigReader;
+import com.mba.utilities.ConfigReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -21,6 +21,10 @@ public class LoginPage extends PageObject{
     @FindBy(xpath = "//input[@value='Login']")
     public WebElement loginBtn;
 
+    @FindBy(xpath = "//i[@class='fa fa-home']")
+    public WebElement homeIcon;
+
+
     //******************* Metodlar ****************//
 
     public void login(){
@@ -29,6 +33,7 @@ public class LoginPage extends PageObject{
         inputEmail.sendKeys(ConfigReader.getProperties("usermail"));
         inputPassword.sendKeys(ConfigReader.getProperties("password"));
         loginBtn.click();
+        homeIcon.click();
     }
 
 

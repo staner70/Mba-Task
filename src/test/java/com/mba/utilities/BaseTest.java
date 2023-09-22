@@ -1,6 +1,6 @@
-package com.masterbranchacademy.utilities;
+package com.mba.utilities;
 
-import com.masterbranchacademy.pages.LoginPage;
+import com.mba.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;

@@ -1,4 +1,4 @@
-package com.masterbranchacademy.utilities;
+package com.mba.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

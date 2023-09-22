@@ -1,6 +1,6 @@
-package com.masterbranchacademy.pages;
+package com.mba.pages;
 
-import com.masterbranchacademy.utilities.Driver;
+import com.mba.utilities.Driver;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
