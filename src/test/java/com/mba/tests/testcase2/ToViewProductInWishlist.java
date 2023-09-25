@@ -1,5 +1,6 @@
 package com.mba.tests.testcase2;
 
+import com.mba.pages.LoginPage;
 import com.mba.pages.WhishlistPage;
 import com.mba.utilities.BaseTest;
 import org.openqa.selenium.By;
@@ -10,6 +11,9 @@ import org.testng.annotations.Test;
 public class ToViewProductInWishlist extends BaseTest {
     @Test
     public void toViewProductInWishlist() throws InterruptedException {
+        LoginPage login = new LoginPage();
+        login.login();
+
         WhishlistPage whishlist = new WhishlistPage();
 
         WebElement wishlistIconMacBook = driver.findElement(By.xpath("(//i[@class='fa fa-heart'] )[2]"));

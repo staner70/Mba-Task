@@ -1,5 +1,6 @@
 package com.mba.tests.testcase4;
 
+import com.mba.pages.LoginPage;
 import com.mba.pages.WhishlistPage;
 import com.mba.utilities.BaseTest;
 import org.testng.Assert;
@@ -9,6 +10,9 @@ public class AddToCartFromWishlist extends BaseTest {
 
     @Test
     public void addToCartFromWishlist() throws InterruptedException {
+        LoginPage login = new LoginPage();
+        login.login();
+
         WhishlistPage whishlistPage = new WhishlistPage();
         whishlistPage.goToWhishlist();
         Thread.sleep(3000);

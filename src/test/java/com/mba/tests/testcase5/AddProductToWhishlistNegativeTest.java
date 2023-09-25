@@ -1,24 +1,20 @@
-package com.mba.tests.testcase1;
+package com.mba.tests.testcase5;
 
-import com.mba.pages.LoginPage;
 import com.mba.utilities.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AddProductToWishlist extends BaseTest {
+public class AddProductToWhishlistNegativeTest extends BaseTest {
     @Test
-    public void addProductToWishlist() throws InterruptedException {
-        LoginPage login = new LoginPage();
-        login.login();
-
+    public void addProductToWhishlistNegativeTest() throws InterruptedException {
         String actualTitleHome = driver.getTitle();
         String expectedTitleHome = "Your Store";
         Assert.assertEquals(actualTitleHome, expectedTitleHome, "Home Page not load");
         Thread.sleep(3000);
 
-        WebElement firstProductWishlistIcon = driver.findElement(By.xpath("(//i[@class='fa fa-heart'] )[2]"));
+       WebElement firstProductWishlistIcon = driver.findElement(By.xpath("(//i[@class='fa fa-heart'] )[2]"));
         firstProductWishlistIcon.click();
 
         Thread.sleep(3000);
@@ -27,7 +23,8 @@ public class AddProductToWishlist extends BaseTest {
         System.out.println("addProductToWishlistMessage.getText() = " + addProductToWishlistMessage.getText());
         String actualMessage = addProductToWishlistMessage.getText();
 
-        Assert.assertTrue(actualMessage.contains("Success"), "Product not added to Wishlist");
+        //Assert.assertFalse(actualMessage.contains("Success"), "Product not added to Wishlist");
+        Assert.assertTrue(actualMessage.contains("You must login"), "Product added to Wishlist");
 
     }
 }

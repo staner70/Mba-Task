@@ -1,5 +1,6 @@
 package com.mba.tests.testcase3;
 
+import com.mba.pages.LoginPage;
 import com.mba.pages.WhishlistPage;
 import com.mba.utilities.BaseTest;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,9 @@ public class RemoveProductFromWishlist extends BaseTest {
 
         @Test
         public void removeProductFromWishlist() throws InterruptedException {
+                LoginPage login = new LoginPage();
+                login.login();
+
                 WhishlistPage whishlistPage = new WhishlistPage();
                 whishlistPage.goToWhishlist();
                 Thread.sleep(3000);
