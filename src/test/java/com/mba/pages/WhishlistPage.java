@@ -17,6 +17,12 @@ public class WhishlistPage extends PageObject{
     @FindBy(xpath = "(//tbody)[3]//tr[1]/td[6]/a[1]/i[1]")
     public WebElement firstProductRemoveBtn;
 
+    @FindBy(xpath = "(//tbody)[3]//tr[1]/td[6]//button/i[1]")
+    public WebElement firstProductAddToCartBtn;
+
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+    public WebElement successMessage;
+
 
 
     //*************** Metodlar *******************//
