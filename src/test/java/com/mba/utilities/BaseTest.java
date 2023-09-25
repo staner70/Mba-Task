@@ -12,11 +12,10 @@ public class BaseTest {
     protected WebDriverWait wait;
 
 
-/*    @BeforeTest
+   @BeforeTest
     public void login(){
-        LoginPage login = new LoginPage();
-        login.login();
-    }*/
+
+    }
 
     @Parameters("browser")
     @BeforeMethod
